@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(C:/Python314/python.exe -m pip install:*)",
+      "Bash(notepad:*)",
+      "Bash(git init:*)",
+      "Bash(git remote add:*)",
+      "Bash(git add:*)"
+    ]
+  }
+}
