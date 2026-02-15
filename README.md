@@ -1,13 +1,13 @@
-# Twitter Bot - AI-Generated News Images
+# X Bot - AI-Generated News Images
 
-Automated Twitter bot: fetches US tech news, generates AI images via Grok, posts with AI-generated summaries.
+Automated X bot: fetches US tech news, generates AI images via Grok, posts with AI-generated summaries.
 
 ## Features
 
 - 📰 Fetches latest US tech news (NewsAPI)
 - 🎨 Generates hyperrealistic images (Grok Imagine Image Pro)
 - 🤖 Creates tweet text (Grok-4-1 Fast Reasoning)
-- 🐦 Auto-posts to Twitter with images
+- 🐦 Auto-posts to X with images
 - 📝 Logging for monitoring/debugging
 
 ## Prerequisites
@@ -15,7 +15,7 @@ Automated Twitter bot: fetches US tech news, generates AI images via Grok, posts
 - Python 3.8+
 - API Keys:
   - [xAI/Grok API](https://x.ai/api)
-  - [Twitter Developer](https://developer.twitter.com/)
+  - [X Developer](https://developer.x.com/)
   - [NewsAPI](https://newsapi.org/)
 
 ## Installation
@@ -54,18 +54,18 @@ pip install -r requirements.txt
 2. Edit `.env` and add your API credentials:
    ```env
    XAI_API_KEY=your_xai_grok_api_key
-   TWITTER_CONSUMER_KEY=your_twitter_consumer_key
-   TWITTER_CONSUMER_SECRET=your_twitter_consumer_secret
-   TWITTER_ACCESS_TOKEN=your_twitter_access_token
-   TWITTER_ACCESS_TOKEN_SECRET=your_twitter_access_token_secret
+   TWITTER_CONSUMER_KEY=your_x_consumer_key
+   TWITTER_CONSUMER_SECRET=your_x_consumer_secret
+   TWITTER_ACCESS_TOKEN=your_x_access_token
+   TWITTER_ACCESS_TOKEN_SECRET=your_x_access_token_secret
    NEWS_API_KEY=your_news_api_key
    ```
 
 ## Configuration
 
-### Twitter API Setup
+### X API Setup
 
-1. Create a Twitter Developer Account at [developer.twitter.com](https://developer.twitter.com/)
+1. Create an X Developer Account at [developer.x.com](https://developer.x.com/)
 2. Create a new App with **Read and Write** permissions
 3. Generate API Keys and Access Tokens
 4. Add credentials to your `.env` file
@@ -124,7 +124,7 @@ python -m pytest test_main.py -v --cov=Main --cov-report=html
 ## Project Structure
 
 ```
-Twitter bot midjourney/
+X-news-image-bot/
 ├── .env                    # Your API credentials (DO NOT COMMIT)
 ├── .env.example            # Template for environment variables
 ├── .gitignore              # Git ignore file
@@ -141,7 +141,7 @@ Twitter bot midjourney/
 2. **Generate Prompt**: Grok-4-1 creates optimized image prompt from news
 3. **Create Image**: Grok Imagine generates hyperrealistic news-related image
 4. **Generate Tweet**: Grok-4-1 creates concise tweet summary
-5. **Post**: Uploads image, posts tweet to Twitter
+5. **Post**: Uploads image, posts to X
 
 ## Customization
 
@@ -161,22 +161,12 @@ IMAGE_MODEL = "grok-imagine-image-pro"
 CHAT_MODEL = "grok-4-1-fast-reasoning"
 ```
 
-## Security
-
-🚨 **IMPORTANT SECURITY WARNINGS**
-
-1. **Never commit your `.env` file** - It contains sensitive API credentials
-2. **Rotate your API keys immediately** if they are ever exposed
-3. **Use environment variables** - Never hardcode credentials in source code
-4. **Review API usage** - Monitor your OpenAI and Twitter API usage regularly
-5. **Keep dependencies updated** - Run `pip install -U -r requirements.txt` periodically
-
 ## Cost Considerations
 
 - **Grok Imagine Image Pro**: Variable (check xAI pricing)
 - **Grok-4-1 Fast Reasoning**: Minimal text generation cost
 - **NewsAPI**: Free tier (limited requests/day)
-- **Twitter API**: Free tier available
+- **X API**: Free tier available
 
 **Estimated cost/run**: ~$0.05 USD (verify current xAI rates)
 
@@ -186,11 +176,11 @@ CHAT_MODEL = "grok-4-1-fast-reasoning"
 
 Make sure your `.env` file exists and contains all required variables. Check that you've copied `.env.example` to `.env` and filled in your actual API keys.
 
-### Twitter API errors
+### X API errors
 
-- Verify your Twitter app has **Read and Write** permissions
+- Verify your X app has **Read and Write** permissions
 - Ensure access tokens are generated with the correct permissions
-- Check that you're not rate-limited (Twitter has posting limits)
+- Check that you're not rate-limited (X has posting limits)
 
 ### xAI/Grok API errors
 
@@ -219,7 +209,7 @@ Contributions are welcome! Please:
 Educational purposes. Comply with:
 
 - [xAI Terms](https://x.ai/legal)
-- [Twitter Developer Agreement](https://developer.twitter.com/en/developer-terms/agreement)
+- [X Developer Agreement](https://developer.x.com/en/developer-terms/agreement)
 - [NewsAPI Terms](https://newsapi.org/terms)
 
 ## Disclaimer
@@ -239,5 +229,5 @@ For issues, questions, or suggestions:
 
 **Built with:**
 - [xAI Grok API](https://x.ai/) - AI image/text generation
-- [Tweepy](https://www.tweepy.org/) - Twitter wrapper
+- [Tweepy](https://www.tweepy.org/) - X API wrapper
 - [NewsAPI](https://newsapi.org/) - News provider
