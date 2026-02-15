@@ -20,10 +20,11 @@ Automated X bot: fetches US tech news, generates AI images via Grok, posts with 
 
 ## Installation
 
-### 1. Clone or download this repository
+### 1. Clone the repository
 
 ```bash
-cd "Twitter bot midjourney"
+git clone https://github.com/jacks3tr/X-news-image-bot.git
+cd X-news-image-bot
 ```
 
 ### 2. Create a virtual environment (recommended)
